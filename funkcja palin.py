@@ -1,7 +1,7 @@
 def palindromy(word):
  txt = word[::-1]
  if word == txt:
-   print('true')
+   return True
  else:
-   print('false')
-palindromy('warka')
+   return False
+print(palindromy('warka'))
