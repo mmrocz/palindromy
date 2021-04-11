@@ -1,7 +1,12 @@
 def palindromy(word):
     word = word.lower()
-    txt = word[::-1]
-    if word == txt:
+    punctuation = '''!()-[]{};:'"\, <>./?@#$%^&*_~'''
+    new_word = ""
+    for i in word:
+        if i not in punctuation:
+            new_word = new_word + i
+    txt = new_word[::-1]
+    if new_word == txt:
         return True
     return False
-print(palindromy('Zakaz'))
+print(palindromy('Kobyła ma mały  ,bok'))
